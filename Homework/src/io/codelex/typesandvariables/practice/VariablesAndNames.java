@@ -5,14 +5,14 @@ public class VariablesAndNames {
         int cars, drivers, passengers, carsNotDriven, carsDriven;
         double seatsInACar, carpoolCapacity, averagePassengersPerCar;
 
-        cars = 100; //cars
-        seatsInACar = 4.0; //seats in a car
-        drivers = 30; // drivers
-        passengers = 90; // passengers
-        carsNotDriven = cars - drivers; // free cars
-        carsDriven = drivers; // cars driven at the moment
-        carpoolCapacity = carsDriven * seatsInACar; // carpool capacity
-        averagePassengersPerCar = passengers / carsDriven; // average passengers per car
+        cars = 100; // number of cars
+        seatsInACar = 4.0;
+        drivers = 30;
+        passengers = 90; // number of passengers
+        carsNotDriven = cars - drivers;
+        carsDriven = drivers;
+        carpoolCapacity = carsDriven * seatsInACar;
+        averagePassengersPerCar = passengers / carsDriven;
 
         System.out.println("There are " + cars + " cars available.");
         System.out.println("There are only " + drivers + " drivers available.");
