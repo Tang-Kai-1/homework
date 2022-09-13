@@ -9,22 +9,24 @@ public class ExcerciseSix {
         int num2;
         int num3;
         int sum;
-        do{
+        while (true) {
             System.out.println("Insert 3 single digit integers:");
             try {
                 num1 = sc.nextInt();
                 num2 = sc.nextInt();
                 num3 = sc.nextInt();
-                if (num1 > 9 || num2 > 9 || num3 > 9 || num1 < -9 || num2 < -9 || num3 < -9)
+                if (num1 > 9 || num2 > 9 || num3 > 9 || num1 < -9 || num2 < -9 || num3 < -9) {
                     System.out.println("All integers must be single digits! Try again.");
-                else break;
-            }catch (Exception e){
+                } else {
+                    break;
+                }
+            } catch (Exception e) {
                 System.out.println("Only integers are allowed! Try again.");
                 sc.next();
             }
-        }while(true);
+        }
         sc.close();
-        sum = num1+num2+num3;
+        sum = num1 + num2 + num3;
         System.out.println("Sum of all digits is: " + sum);
     }
 }

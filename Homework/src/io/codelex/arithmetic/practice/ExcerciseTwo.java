@@ -5,8 +5,12 @@ public class ExcerciseTwo {
         CheckOddEven(8);
     }
     static void CheckOddEven(int num){
-        if(num%2==0) System.out.println("Even Number");
-        else System.out.println("Odd Number");
+        if(num%2==0) {
+            System.out.println("Even Number");
+        }
+        else {
+            System.out.println("Odd Number");
+        }
         System.out.println("Bye!");
     }
 }

@@ -8,7 +8,9 @@ public class ExcerciseFour {
     }
     static int Product1ToN(){
         int sum=1;
-        for(int i = 1; i<=10; i++)sum*=i;
+        for(int i = 1; i<=10; i++) {
+            sum *= i;
+        }
         return sum;
     }
 }

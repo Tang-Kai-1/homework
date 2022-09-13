@@ -6,35 +6,42 @@ import java.util.Scanner;
 
 public class ExerciseNine {
     public static void main(String[] args) {
-        int height=0,weight=0;
+        int height = 0;
+        int weight = 0;
         Scanner sc = new Scanner(System.in);
-        do{
+        while (true) {
             System.out.println("Input height in cm:");
-            try{
-                height=sc.nextInt();
+            try {
+                height = sc.nextInt();
                 break;
-            }catch(Exception e){
+            } catch (Exception e) {
                 System.out.println("Input only whole integers!");
                 sc.next();
             }
-        }while(true);
-        do{
+        }
+        while (true) {
             System.out.println("Input weight in kg:");
-            try{
-                weight=sc.nextInt();
+            try {
+                weight = sc.nextInt();
                 break;
-            }catch(Exception e){
+            } catch (Exception e) {
                 System.out.println("Input only whole integers!");
                 sc.next();
             }
-        }while(true);
-        System.out.println(checkBMI(height,weight));
+        }
+        System.out.println(checkBMI(height, weight));
     }
-    static String checkBMI(int height, int weight){
-        double heightInInches = (double)height*0.393700787, weightInPounds = (double)weight/0.45359237;
-        double BMI = ((double) weightInPounds*703)/Math.pow(heightInInches,2);
-        if(BMI <= 25 && BMI >= 18.5)return "Optimal BMI";
-        else if(BMI>25) return "You too fat!";
-        else return "You too skinny!";
+
+    static String checkBMI(int height, int weight) {
+        double heightInInches = (double) height * 0.393700787;
+        double weightInPounds = (double) weight / 0.45359237;
+        double BMI = ((double) weightInPounds * 703) / Math.pow(heightInInches, 2);
+        if (BMI <= 25 && BMI >= 18.5) {
+            return "Optimal BMI";
+        } else if (BMI > 25) {
+            return "You too fat!";
+        } else {
+            return "You too skinny!";
+        }
     }
 }
