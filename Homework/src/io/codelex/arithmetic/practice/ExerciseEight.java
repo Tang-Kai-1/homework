@@ -7,8 +7,12 @@ public class ExerciseEight {
         calculatePay(hoursWorked, payRate);
     }
     static void calculatePay(int num, double rate){
-        if(rate<8) System.out.println("Rate is lower than the State minimum. Pay more!");
-        else if (num>60) System.out.println("The great Foo forbids you from working more than 60 hours per week!");
+        if(rate<8) {
+            System.out.println("Rate is lower than the State minimum. Pay more!");
+        }
+        else if (num>60) {
+            System.out.println("The great Foo forbids you from working more than 60 hours per week!");
+        }
         else{
             int overtime = num%40;
             double pay = (double)(num-overtime)*rate + (double)overtime*(rate*1.5);
