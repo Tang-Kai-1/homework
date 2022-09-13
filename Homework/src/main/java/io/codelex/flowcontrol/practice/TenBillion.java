@@ -43,9 +43,6 @@ public class TenBillion {
             }
             System.out.println("Number of digits in the number: " + digits);
         }
-        //} else {
-        //    System.out.println("The number is not a long");
-        //}
     }
 
 }

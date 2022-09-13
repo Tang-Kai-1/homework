@@ -1,4 +1,4 @@
-package main.io.codelex.loops.practice;
+package io.codelex.loops.practice;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package main.io.codelex.loops.practice;
+package io.codelex.loops.practice;
 
 import java.util.Scanner;
 
@@ -9,8 +9,10 @@ public class ExerciseTen {
         int min = sc.nextInt();
         System.out.println("Enter max:");
         int max = sc.nextInt();
-        for(int i = 0; i<max-min; i++){
-            for(int j = min; j<=max; j++) System.out.print(j);
+        for (int i = 0; i < max - min; i++) {
+            for (int j = min; j <= max; j++) {
+                System.out.print(j);
+            }
             System.out.println();
         }
     }

@@ -1,4 +1,4 @@
-package codelex.flowcontrol.practice;
+package io.codelex.flowcontrol.practice;
 
 import java.util.Scanner;
 
@@ -23,10 +23,18 @@ public class LargestNumber {
         Input the 2nd number: 78
         Input the 3rd number: 87
          */
-        if (num1 > num2 && num1 > num3) System.out.println("1st is largest.");
-        else if (num2 > num1 && num2 > num3) System.out.println("2nd is largest.");
-        else if (num3 > num1 && num3 > num2) System.out.println("3rd is largest.");
-        else System.out.println("All numbers are equal.");
+        if (num1 > num2 && num1 > num3) {
+            System.out.println("1st is largest.");
+        }
+        else if (num2 > num1 && num2 > num3) {
+            System.out.println("2nd is largest.");
+        }
+        else if (num3 > num1 && num3 > num2) {
+            System.out.println("3rd is largest.");
+        }
+        else {
+            System.out.println("All numbers are equal.");
+        }
     }
 
 }

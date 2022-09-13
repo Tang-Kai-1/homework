@@ -7,11 +7,13 @@ public class ExerciseFour {
         Scanner sc = new Scanner(System.in);
         System.out.println("Input a day (0-6):");
         int day = sc.nextInt();
-        if(day>=0 && day<=6){
-            if(day==0) System.out.println("Sunday");
-            else if(day==1) System.out.println("Monday");
-            else{
-                switch (day){
+        if (day >= 0 && day <= 6) {
+            if (day == 0) {
+                System.out.println("Sunday");
+            } else if (day == 1) {
+                System.out.println("Monday");
+            } else {
+                switch (day) {
                     case 2:
                         System.out.println("Tuesday");
                         break;
@@ -28,6 +30,6 @@ public class ExerciseFour {
                         System.out.println("Saturday");
                 }
             }
-        }else System.out.println("Not a valid day.");
+        } else System.out.println("Not a valid day.");
     }
 }

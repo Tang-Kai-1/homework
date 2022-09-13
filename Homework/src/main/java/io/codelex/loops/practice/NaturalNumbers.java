@@ -1,4 +1,4 @@
-package main.io.codelex.loops.practice;
+package io.codelex.loops.practice;
 
 public class NaturalNumbers {
 
@@ -8,8 +8,8 @@ public class NaturalNumbers {
         System.out.println("The first 10 natural numbers are: ");
 
 
-        for (i = 1; i<=10; i++) {
-          System.out.println(i);
+        for (i = 1; i <= 10; i++) {
+            System.out.println(i);
         }
 
     }
