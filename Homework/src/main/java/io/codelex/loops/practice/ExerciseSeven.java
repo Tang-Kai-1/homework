@@ -1,5 +1,6 @@
 package io.codelex.loops.practice;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class ExerciseSeven {
@@ -10,7 +11,7 @@ public class ExerciseSeven {
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to Piglet!");
         while (true) {
-            dice = (int) (Math.random() * (6 - 1)) + 1;
+            dice = RollDice();
             System.out.println("You rolled a: " + dice);
             score += dice;
             if (dice == 1) {
@@ -18,11 +19,16 @@ public class ExerciseSeven {
                 break;
             }
             System.out.print("Do you want to continue[Y/N]: ");
-            answer = sc.nextLine().charAt(0);
+            answer = sc.nextLine().toLowerCase().charAt(0);
             if (answer == 'n') {
                 System.out.println("You got " + score + " points.");
                 break;
             }
         }
+    }
+
+    public static int RollDice() {
+        Random random = new Random();
+        return random.nextInt(6 - 1) + 1;
     }
 }
