@@ -1,4 +1,4 @@
-package main.io.codelex.typesandvariables.practice;
+package io.codelex.typesandvariables.practice;
 
 public class VariablesAndNames {
     public static void main(String[] args) {

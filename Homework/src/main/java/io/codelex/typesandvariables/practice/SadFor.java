@@ -1,6 +1,6 @@
-package main.io.codelex.typesandvariables.practice;
+package io.codelex.typesandvariables.practice;
 
-import main.io.codelex.NoCodeWrittenException;
+import io.codelex.NoCodeWrittenException;
 
 public class SadFor {
     public static void main(String[] args) {

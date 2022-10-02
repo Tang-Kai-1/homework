@@ -1,4 +1,4 @@
-package main.io.codelex;
+package io.codelex;
 
 public class NoCodeWrittenException extends RuntimeException {
     public NoCodeWrittenException() {
