@@ -1,4 +1,4 @@
-package io.codelex.typesandvariables.practice;
+package main.io.codelex.typesandvariables.practice;
 
 public class Casting {
     public static void main(String[] args) {

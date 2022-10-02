@@ -1,4 +1,4 @@
-package io.codelex.typesandvariables.examples;
+package main.io.codelex.typesandvariables.examples;
 
 public class NullExample {
     public static void main(String[] args) {
