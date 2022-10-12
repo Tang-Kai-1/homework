@@ -16,17 +16,17 @@ public class CharacterToStringCollector implements Collector<Character, StringBu
 
     @Override
     public BiConsumer<StringBuilder, Character> accumulator() {
-        return (StringBuilder, Character) -> StringBuilder.append(Character);
+        return StringBuilder::append;
     }
 
     @Override
     public BinaryOperator<StringBuilder> combiner() {
-        return (StringBuilder1, StringBuilder2) -> StringBuilder1.append(StringBuilder2);
+        return StringBuilder::append;
     }
 
     @Override
     public Function<StringBuilder, String> finisher() {
-        return (StringBuilder) -> StringBuilder.toString();
+        return StringBuilder::toString;
     }
 
     @Override

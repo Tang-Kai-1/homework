@@ -60,11 +60,11 @@ public class StreamsExercise {
     }
 
     public static Integer getMaxAge(List<User> users) {
-        return Collections.max(users.stream().map(User::getAge).collect(Collectors.toList()));
+        return users.stream().mapToInt(User::getAge).max().orElse(0);
     }
 
     public static Integer getMinAge(List<User> users) {
-        return Collections.min(users.stream().map(User::getAge).collect(Collectors.toList()));
+        return users.stream().mapToInt(User::getAge).min().orElse(0);
     }
 
     public static Map<Boolean, List<User>> partionUsersByGender(List<User> users) {
