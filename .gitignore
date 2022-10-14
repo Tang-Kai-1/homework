@@ -23,3 +23,11 @@
 hs_err_pid*
 */out/
 */target/
+*/src/main/java/io/codelex/arithmetic/
+*/src/main/java/io/codelex/flowcontrol/
+*/src/main/java/io/codelex/generics/
+*/src/main/java/io/codelex/loops/
+*/src/main/java/io/codelex/maps/
+*/src/main/java/io/codelex/polymorphism/
+*/src/main/java/io/codelex/streams/
+*/src/main/java/io/codelex/typesandvariables/
