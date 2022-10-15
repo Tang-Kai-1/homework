@@ -30,25 +30,22 @@ public class DragRace {
         list.add(car5);
         list.add(car6);
         for (int i = 0; i < 10; i++) {
-            for (Object car : list) {
+            for (Car car : list) {
                 if (i == 2) {
                     if (car instanceof CarWithBoost) {
                         ((CarWithBoost) car).useNitrousOxideEngine();
                     }
                 }
-                ((Car) car).speedUp();
+                car.speedUp();
             }
         }
-        int fastestIndex = 0;
-        int fastestSpeed = Integer.parseInt(list.get(0).showCurrentSpeed());
-        for (int i = 0; i < list.size(); i++) {
-            //System.out.println(list.get(i).getClass() + ": " + list.get(i).showCurrentSpeed());
-            int speedX = Integer.parseInt(list.get(i).showCurrentSpeed());
-            if (speedX > fastestSpeed) {
-                fastestIndex = i;
-                fastestSpeed = speedX;
+        Car fastestCar = list.get(0);
+        for (Car car : list) {
+            int speedX = Integer.parseInt(car.showCurrentSpeed());
+            if (speedX > Integer.parseInt(fastestCar.showCurrentSpeed())) {
+                fastestCar = car;
             }
         }
-        System.out.println(list.get(fastestIndex).toString());
+        System.out.println(fastestCar.getClass().getSimpleName());
     }
 }

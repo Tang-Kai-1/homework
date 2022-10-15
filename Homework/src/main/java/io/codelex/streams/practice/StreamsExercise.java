@@ -104,7 +104,7 @@ public class StreamsExercise {
     }
 
     public static List<Integer> generateFirst10PrimeNumbers() {
-        return IntStream.rangeClosed(2, Integer.MAX_VALUE).filter(n -> isPrime(n)).limit(10).boxed().collect(Collectors.toList());
+        return IntStream.rangeClosed(2, 1000).filter(n -> isPrime(n)).limit(10).boxed().collect(Collectors.toList());
     }
 
     public static boolean isPrime(int number) {
