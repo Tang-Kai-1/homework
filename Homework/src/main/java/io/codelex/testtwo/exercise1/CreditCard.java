@@ -1,11 +1,10 @@
 package io.codelex.testtwo.exercise1;
 
 public class CreditCard extends Card {
-    private double cardLimit;
 
-    public CreditCard(String cardNumber, String nameFull, int cvcCode, double cardLimit) {
+
+    public CreditCard(String cardNumber, String nameFull, int cvcCode) {
         super(cardNumber, nameFull, cvcCode);
-        this.cardLimit = cardLimit;
     }
 
 
