@@ -5,29 +5,25 @@ import java.util.List;
 
 public class Basket<T> {
     private List<T> list;
-    private int elementCount=0;
-    private T object;
-    public Basket(T object){
+    private int elementCount = 0;
+
+    public Basket() {
         list = new ArrayList<>();
-        this.object=object;
     }
-    public <E> void addToBasket(E insertedObject) throws BasketFullException,IllegalArgumentException{
-        if(insertedObject.getClass().equals(object.getClass())) {
-            if (elementCount == 10) {
-                throw new BasketFullException("Basket is full!");
-            } else {
-                elementCount += 1;
-            }
-        }
-        else{
-            throw new IllegalArgumentException("Input mismatch!");
+
+    public void addToBasket(T insertedObject) throws BasketFullException {
+        if (list.size() == 10) {
+            throw new BasketFullException("Basket is full!");
+        } else {
+            list.add(insertedObject);
         }
     }
-    public void removeFromBasket() throws BasketEmptyException{
-        if(elementCount==0){
+
+    public void removeFromBasket() throws BasketEmptyException {
+        if (elementCount == 0) {
             throw new BasketEmptyException("Basket is empty!");
-        }else{
-            elementCount-=1;
+        } else {
+            list.remove(list.size() - 1);
         }
     }
 }

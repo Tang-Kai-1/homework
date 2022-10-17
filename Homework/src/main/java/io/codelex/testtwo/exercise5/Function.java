@@ -14,13 +14,14 @@ public class Function {
         double evenPercent = partOf(numbers, (Integer n) -> n % 2 == 1);
         System.out.println(evenPercent); //Should print out 0.5 because 50% of numbers are even
     }
-    public static <V> double partOf(List<V> list, Predicate<V> function){
+
+    public static <V> double partOf(List<V> list, Predicate<V> function) {
         int count = 0;
-        for(V element:list){
-            if(function.test(element)){
+        for (V element : list) {
+            if (function.test(element)) {
                 count++;
             }
         }
-        return count/(double)(list.size());
+        return count / (double) (list.size());
     }
 }

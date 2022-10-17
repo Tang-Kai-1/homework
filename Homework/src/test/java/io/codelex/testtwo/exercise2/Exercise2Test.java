@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class Exercise2Test {
     @Test
     void TestAppleEmptyBasket() {
-        Basket<Apple> basket = new Basket<>(new Apple());
+        Basket<Apple> basket = new Basket<>();
         Exception exception = assertThrows(BasketEmptyException.class, () -> {
             basket.removeFromBasket();
         });
@@ -21,7 +21,7 @@ public class Exercise2Test {
 
     @Test
     void TestMushroomEmptyBasket() {
-        Basket<Mushroom> basket = new Basket<>(new Mushroom());
+        Basket<Mushroom> basket = new Basket<>();
         Exception exception = assertThrows(BasketEmptyException.class, () -> {
             basket.removeFromBasket();
         });
@@ -34,7 +34,7 @@ public class Exercise2Test {
 
     @Test
     void TestAppleFullBasket() {
-        Basket<Apple> basket = new Basket<>(new Apple());
+        Basket<Apple> basket = new Basket<>();
         Exception exception = assertThrows(BasketFullException.class, () -> {
             for (int i = 0; i <= 10; i++) {
                 basket.addToBasket(new Apple());
@@ -49,7 +49,7 @@ public class Exercise2Test {
 
     @Test
     void TestMushroomFullBasket() {
-        Basket<Mushroom> basket = new Basket<>(new Mushroom());
+        Basket<Mushroom> basket = new Basket<>();
         Exception exception = assertThrows(BasketFullException.class, () -> {
             for (int i = 0; i <= 10; i++) {
                 basket.addToBasket(new Mushroom());
@@ -57,20 +57,6 @@ public class Exercise2Test {
         });
 
         String expectedMessage = "Basket is full!";
-        String actualMessage = exception.getMessage();
-
-        assertTrue(actualMessage.contains(expectedMessage));
-    }
-
-    @Test
-    void TestMultipleItemsInBasket() {
-        Basket<Apple> basket = new Basket<>(new Apple());
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            for (int i = 0; i <= 10; i++) {
-                basket.addToBasket(new Mushroom());
-            }
-        });
-        String expectedMessage = "Input mismatch";
         String actualMessage = exception.getMessage();
 
         assertTrue(actualMessage.contains(expectedMessage));

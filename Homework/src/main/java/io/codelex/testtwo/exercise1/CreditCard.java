@@ -8,21 +8,12 @@ public class CreditCard extends Card {
         this.cardLimit = cardLimit;
     }
 
-    @Override
-    public void addMoney(double amount) {
-        balance += amount;
-    }
 
     @Override
     public void removeMoney(double amount) throws NotEnoughFundsException {
-        if (Math.abs(balance-amount)>cardLimit){
-            throw new NotEnoughFundsException("Can't withdraw more than your card limit!");
-        }
-        else {
-            balance -= amount;
-            if (balance < 100) {
-                System.out.println("Warning: Low funds");
-            }
+        super.removeMoney(amount);
+        if (balance < 100) {
+            System.out.println("Warning: Low funds");
         }
     }
 }
