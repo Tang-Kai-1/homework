@@ -6,20 +6,20 @@ public class Video {
     private double rating;
     private int userCount = 1;
 
-    protected Video(String title, double rating) {
+    Video(String title, double rating) {
         this.title = title;
         this.rating = rating;
     }
 
-    protected String getTitle() {
+    String getTitle() {
         return title;
     }
 
-    protected boolean isCheckedOut() {
+    boolean isCheckedOut() {
         return checkedOut;
     }
 
-    protected void setCheckedOut() {
+    void setCheckedOut() {
         if (isCheckedOut()) {
             System.out.println("Already checked out.");
         } else {
@@ -29,7 +29,7 @@ public class Video {
         }
     }
 
-    protected void setCheckedIn() {
+    void setCheckedIn() {
         if (!isCheckedOut()) {
             System.out.println("Already checked in.");
         } else {
@@ -38,15 +38,15 @@ public class Video {
         }
     }
 
-    protected double getRating() {
+    double getRating() {
         return rating / userCount;
     }
 
-    protected void addRating(double rating) {
+    void addRating(double rating) {
         this.rating += rating;
     }
 
-    protected void printVideo() {
+    void printVideo() {
         System.out.println("title: " + this.title + "; rating: " + getRating() + "; Is checked out: " + this.checkedOut);
     }
 }

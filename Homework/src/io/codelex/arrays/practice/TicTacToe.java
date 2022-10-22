@@ -37,9 +37,9 @@ public class TicTacToe {
 
     public static boolean isEnd() {
         int countEmpty = 0;
-        for (int r = 0; r < 3; r++) {
-            for (int c = 0; c < 3; c++) {
-                if (board[r][c] == ' ') {
+        for (char[] row : board) {
+            for (char cell : row) {
+                if (cell == ' ') {
                     countEmpty++;
                 }
             }
@@ -59,8 +59,8 @@ public class TicTacToe {
         else if (board[0][0] == 'O' && board[1][0] == 'O' && board[2][0] == 'O') return true;
         else if (board[0][1] == 'O' && board[1][1] == 'O' && board[2][1] == 'O') return true;
         else if (board[0][2] == 'O' && board[1][2] == 'O' && board[2][2] == 'O') return true;
-        else if (board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == 'O') return true;
-        else if (board[0][2] == 'X' && board[1][1] == 'X' && board[2][0] == 'O') return true;
+        else if (board[0][0] == 'O' && board[1][1] == 'O' && board[2][2] == 'O') return true;
+        else if (board[0][2] == 'O' && board[1][1] == 'O' && board[2][0] == 'O') return true;
         else return countEmpty == 0;
     }
 
@@ -80,8 +80,8 @@ public class TicTacToe {
         else if (board[0][0] == 'O' && board[1][0] == 'O' && board[2][0] == 'O') System.out.println("O wins.");
         else if (board[0][1] == 'O' && board[1][1] == 'O' && board[2][1] == 'O') System.out.println("O wins.");
         else if (board[0][2] == 'O' && board[1][2] == 'O' && board[2][2] == 'O') System.out.println("O wins.");
-        else if (board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == 'O') System.out.println("O wins");
-        else if (board[0][2] == 'X' && board[1][1] == 'X' && board[2][0] == 'O') System.out.println("O wins");
+        else if (board[0][0] == 'O' && board[1][1] == 'O' && board[2][2] == 'O') System.out.println("O wins");
+        else if (board[0][2] == 'O' && board[1][1] == 'O' && board[2][0] == 'O') System.out.println("O wins");
         else System.out.println("The game is a tie.");
 
     }

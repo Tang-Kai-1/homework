@@ -3,18 +3,19 @@ package io.codelex.classesandobjects.practice;
 public class Dog {
     private String name;
     private String sex;
-    private String nameFather="Unknown";
-    private String nameMother="Unknown";
+    private String nameFather = "Unknown";
+    private String nameMother = "Unknown";
 
-    public Dog(String name, String sex){
-        this.name=name;
-        this.sex=sex;
+    public Dog(String name, String sex) {
+        this.name = name;
+        this.sex = sex;
     }
-    public Dog(String name, String sex, String nameFather, String nameMother){
-        this.name=name;
-        this.sex=sex;
-        this.nameFather=nameFather;
-        this.nameMother=nameMother;
+
+    public Dog(String name, String sex, String nameFather, String nameMother) {
+        this.name = name;
+        this.sex = sex;
+        this.nameFather = nameFather;
+        this.nameMother = nameMother;
     }
 
     @Override
@@ -27,7 +28,7 @@ public class Dog {
                 '}';
     }
 
-    public String fathersName(){
+    public String fathersName() {
         return this.nameFather;
     }
 
@@ -43,7 +44,7 @@ public class Dog {
         this.nameMother = nameMother;
     }
 
-    public boolean hasSameMotherAs(Dog dog){
+    public boolean hasSameMotherAs(Dog dog) {
         return this.nameMother.equals(dog.mothersName());
     }
 }

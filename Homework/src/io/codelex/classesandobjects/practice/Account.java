@@ -48,7 +48,7 @@ public class Account {
 
     }
 
-    public static void transfer(Account from, Account to, double howMuch) {
+    private static void transfer(Account from, Account to, double howMuch) {
         from.withdrawal(howMuch);
         to.deposit(howMuch);
         System.out.println(from.toString());

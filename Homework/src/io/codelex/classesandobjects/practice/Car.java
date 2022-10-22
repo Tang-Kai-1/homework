@@ -15,12 +15,12 @@ public class Car {
         return liters / ((endKilometers - startKilometers) / 100);
     }
 
-    public boolean gasHog() {
+    public final boolean gasHog() {
 
         return calculateConsumption() > 15;
     }
 
-    public boolean economyCar() {
+    public final boolean economyCar() {
         return calculateConsumption() < 5;
     }
 
