@@ -62,7 +62,8 @@ public class Computer {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Computer computer = (Computer) o;
-        return processor.equals(computer.processor) && ram.equals(computer.ram) && graphicsCard.equals(computer.graphicsCard) && company.equals(computer.company) && model.equals(computer.model);
+        return processor.equals(computer.processor) && ram.equals(computer.ram) &&
+                graphicsCard.equals(computer.graphicsCard) && company.equals(computer.company) && model.equals(computer.model);
     }
 
     @Override
