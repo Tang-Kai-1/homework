@@ -14,21 +14,17 @@ public class DatePeriod {
     }
 
     public DatePeriod intersection(DatePeriod secondPeriod) {
-        LocalDate firstPeriodFirstDate = firstDate;
-        LocalDate firstPeriodSecondDate = secondDate;
-        LocalDate secondPeriodFirstDate = secondPeriod.firstDate;
-        LocalDate secondPeriodSecondDate = secondPeriod.secondDate;
 
-        if (periodsEquals(firstPeriodFirstDate, firstPeriodSecondDate, secondPeriodFirstDate, secondPeriodSecondDate)) {
+        if (periodsEquals(firstDate, secondDate, secondPeriod.firstDate, secondPeriod.secondDate)) {
             return secondPeriod;
-        } else if (includes(firstPeriodFirstDate, firstPeriodSecondDate, secondPeriodFirstDate, secondPeriodSecondDate)) {
+        } else if (includes(firstDate, secondDate, secondPeriod.firstDate, secondPeriod.secondDate)) {
             return secondPeriod;
-        } else if (includes(secondPeriodFirstDate, secondPeriodSecondDate, firstPeriodFirstDate, firstPeriodSecondDate)) {
-            return new DatePeriod(firstPeriodFirstDate, firstPeriodSecondDate);
-        } else if (firstPeriodSecondDate.isAfter(secondPeriodFirstDate) && firstPeriodFirstDate.isBefore(secondPeriodSecondDate)) {
-            return new DatePeriod(secondPeriodFirstDate, firstPeriodSecondDate);
-        } else if (secondPeriodSecondDate.isAfter(firstPeriodFirstDate) && secondPeriodFirstDate.isBefore(firstPeriodSecondDate)) {
-            return new DatePeriod(firstPeriodFirstDate, secondPeriodSecondDate);
+        } else if (includes(secondPeriod.firstDate, secondPeriod.secondDate, firstDate, secondDate)) {
+            return new DatePeriod(firstDate, secondDate);
+        } else if (secondDate.isAfter(secondPeriod.firstDate) && firstDate.isBefore(secondPeriod.secondDate)) {
+            return new DatePeriod(secondPeriod.firstDate, secondDate);
+        } else if (secondPeriod.secondDate.isAfter(firstDate) && secondPeriod.firstDate.isBefore(secondDate)) {
+            return new DatePeriod(firstDate, secondPeriod.secondDate);
         }
         return null;
     }

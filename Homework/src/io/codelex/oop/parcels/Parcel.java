@@ -6,6 +6,10 @@ public class Parcel implements Validatable {
     private int zLength;
     private float weight;
     private boolean isExpress;
+    private int side = 30;
+    private static final int maxSideSum = 300;
+    private static final int maxWeight = 30;
+    private static final int maxWeightExpress = 15;
 
     public Parcel(int xLength, int yLength, int zLength, float weight, boolean isExpress) {
         this.xLength = xLength;
@@ -17,27 +21,27 @@ public class Parcel implements Validatable {
 
     @Override
     public boolean validate() {
-        if (xLength + yLength + zLength >= 300) {
+        if (xLength + yLength + zLength >= maxSideSum) {
             System.out.println("Exceeds maximum size.");
             return false;
         }
-        if (xLength < 30) {
+        if (xLength < side) {
             System.out.println("X side too small.");
             return false;
         }
-        if (yLength < 30) {
+        if (yLength < side) {
             System.out.println("Y side too small.");
             return false;
         }
-        if (zLength < 30) {
+        if (zLength < side) {
             System.out.println("Z side too small.");
             return false;
         }
-        if (!isExpress && weight > 30) {
+        if (!isExpress && weight > maxWeight) {
             System.out.println("Exceeds weight limit.");
             return false;
         }
-        if (isExpress && weight > 15) {
+        if (isExpress && weight > maxWeightExpress) {
             System.out.println("Exceeds weight limit for express.");
             return false;
         }
