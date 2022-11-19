@@ -1,5 +1,6 @@
 package io.codelex.typesandvariables.examples;
 
+
 public class VariableScope {
     public static int x = 10; // class level
 
