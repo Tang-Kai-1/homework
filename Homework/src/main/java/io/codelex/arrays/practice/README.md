@@ -2,34 +2,36 @@
 
 ## Exercise #1
 
-See [Exercise1.java](./Exercise1.java)
+See [Exercise1.java](Exercise1.java)
 
 ## Exercise #2
 
-See [Exercise2.java](./Exercise2.java)
+See [Exercise2.java](Exercise2.java)
 
 ## Exercise #3
 
-See [Exercise3.java](./Exercise3.java)
+See [Exercise3.java](Exercise3.java)
 
 ## Exercise #4
 
-See [Exercise4.java](./Exercise4.java)
+See [Exercise4.java](Exercise4.java)
 
 ## Exercise #5
 
-See [Exercise5.java](./Exercise5.java)
+See [Exercise5.java](Exercise5.java)
 
 ## Exercise #6
 
-Write a program that creates an array of ten integers. It should put ten random numbers from 1 to 100 in the array. It should copy all the elements of that array into another array of the same size. Then display the contents of both arrays. To get the output to look like mine, you'll need a several for loops.
+Write a program that creates an array of ten integers. It should put ten random numbers from 1 to 100 in the array. It
+should copy all the elements of that array into another array of the same size. Then display the contents of both
+arrays. To get the output to look like mine, you'll need a several for loops.
 
-  - Create an array of ten integers
-  - Fill the array with ten random numbers (1-100)
-  - Copy the array into another array of the same capacity
-  - Change the last value in the first array to a -7
-  - Display the contents of both arrays
-  
+- Create an array of ten integers
+- Fill the array with ten random numbers (1-100)
+- Copy the array into another array of the same capacity
+- Change the last value in the first array to a -7
+- Display the contents of both arrays
+
 ```
 Array 1: 45 87 39 32 93 86 12 44 75 -7
 Array 2: 45 87 39 32 93 86 12 44 75 50
@@ -65,11 +67,11 @@ The game is a tie.
 
 Write a program to play a word-guessing game like Hangman.
 
-  - It must randomly choose a word from a list of words.
-  - It must stop when all the letters are guessed.
-  - It must give them limited tries and stop after they run out.
-  - It must display letters they have already guessed (either only the incorrect guesses or all guesses).
-  
+- It must randomly choose a word from a list of words.
+- It must stop when all the letters are guessed.
+- It must give them limited tries and stop after they run out.
+- It must display letters they have already guessed (either only the incorrect guesses or all guesses).
+
 ```
 -=-=-=-=-=-=-=-=-=-=-=-=-=-
 
